@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mr Lan</title>
+
+    <style>
+      video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <video id="video" poster="https://firebasestorage.googleapis.com/v0/b/mr-lan.appspot.com/o/MrPurrs.jpg?alt=media" muted autoplay autoPlay loop>
+    <source src="https://firebasestorage.googleapis.com/v0/b/mr-lan.appspot.com/o/MrPurrs.mp4?alt=media" type="video/mp4">
+  </video>
+  <button id="unmuteButton">Play Sound</button>
+
+<script>
+  var button = document.getElementById('unmuteButton');
+  var video = document.getElementById('video');
+  button.addEventListener('click', function() {
+    video.muted = false;
+    button.hidden = true;
+  });
+</script>
+</html>
